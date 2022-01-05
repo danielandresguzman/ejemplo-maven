@@ -11,11 +11,11 @@ pipeline {
             steps {
                checkout(
                         [$class: 'GitSCM',
-                        branches: [[name: "jenkins" ]],
-                        userRemoteConfigs: [[url: 'https://github.com/tundervirld/clase2mod3seccion3']]])
+                        branches: [[name: "feature/jenkinsascode" ]],
+                        userRemoteConfigs: [[url: 'https://github.com/danielandresguzman/ejemplo-maven.git']]])
             }
         }
-        stage("Paso 2: Compliar"){
+        stage("Paso 2: Compilar"){
             steps {
                 script {
                 sh "echo 'Compile Code!'"
