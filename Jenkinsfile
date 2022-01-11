@@ -13,7 +13,7 @@ pipeline {
         stage("Paso 2: Testear"){
             steps {
                 script {
-                sh "echo 'Test Code!'"
+                sh "echo 'Test2 Code!'"
                 // Run Maven on a Unix agent.
                 sh "mvn clean test -e"
                 }
