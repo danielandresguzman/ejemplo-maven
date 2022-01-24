@@ -20,7 +20,7 @@ pipeline {
                 script {
                 sh "echo 'Test Code!'"
                 // Run Maven on a Unix agent.
-                sh "mvn clean test -e"
+                //sh "mvn clean test -e"
                 }
             }
         }
@@ -44,7 +44,7 @@ pipeline {
                 withSonarQubeEnv('sonarqube') {
                     sh "echo 'Calling sonar Service in another docker container!'"
                     // Run Maven on a Unix agent to execute Sonar.
-                    sh 'mvn clean verify sonar:sonar'
+                    //sh 'mvn clean verify sonar:sonar'
                 }
             }
         }
