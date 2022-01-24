@@ -15,10 +15,10 @@ pipeline {
                 }
             }
         }
-        stage("Paso 2: Testear"){
+        stage("Paso 2: Testearcomentado"){
             steps {
                 script {
-                sh "echo 'Test Code!'"
+                sh "echo 'Test Codee!'"
                 // Run Maven on a Unix agent.
                 //sh "mvn clean test -e"
                 }
@@ -41,7 +41,8 @@ pipeline {
         }
         stage("Paso 4: Análisis SonarQube"){
             steps {
-                withSonarQubeEnv('sonarqube') {
+                //withSonarQubeEnv('sonarqube') 
+                {
                     sh "echo 'Calling sonar Service in another docker container!'"
                     // Run Maven on a Unix agent to execute Sonar.
                     //sh 'mvn clean verify sonar:sonar'
